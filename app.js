@@ -4,6 +4,7 @@ import { dirname } from 'path'
 
 // Creation of the server
 const app = express()
+app.use(express.static('public'))
 
 // Setting up EJS to manage our views
 app.set('view engine', 'ejs')
@@ -19,7 +20,6 @@ const server = app.listen(8080, ()=>{
 })
 
 // GET Request
-
 app.get('/', (req, res)=>{
     console.log('request received')
     res.render('index')
