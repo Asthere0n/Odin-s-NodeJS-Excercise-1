@@ -21,15 +21,17 @@ const server = app.listen(8080, ()=>{
 
 // GET Request
 app.get('/', (req, res)=>{
-    console.log('request received')
+    console.log('request received: Main page')
     res.render('index')
 })
 
 app.get('/about', (req, res) => {
+    console.log('request received: About page')
     res.render('about')
 })
 
 app.get('/contact-me', (req, res) => {
+    console.log('request received: Contact page')
     res.render('contact-me')
 })
 
